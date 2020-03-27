@@ -4,7 +4,14 @@ using UnityEngine;
 
 public class HealthSystem : MonoBehaviour
 {
-    public float Health=100f;
+    [HideInInspector]
+    public float Health;
+    public float Maxhealth;
+
+    public void Start()
+    {
+        Health = Maxhealth;
+    }
     public void HealthDecrese(float Damage)
     {
         Health -= Damage;
