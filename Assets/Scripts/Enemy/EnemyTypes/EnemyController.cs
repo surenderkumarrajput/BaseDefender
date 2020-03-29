@@ -51,6 +51,13 @@ public class EnemyController : MonoBehaviour
             HealthSystem.Health = Mathf.Clamp(HealthSystem.Health, 0, 100f);
             PlayerMoney.AddMoney(HitBonus);
         }
+        if (collision.gameObject.CompareTag("PowerupBullet"))
+        {
+            var hitDamage = collision.gameObject.GetComponent<PowerUpbullet>().Damage;
+            HealthSystem.HealthDecrese(hitDamage);
+            HealthSystem.Health = Mathf.Clamp(HealthSystem.Health, 0, 100f);
+            PlayerMoney.AddMoney(HitBonus);
+        }
     }
     void Update()
     {

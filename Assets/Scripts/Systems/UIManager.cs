@@ -5,12 +5,13 @@ using TMPro;
 public class UIManager : MonoBehaviour
 {
     public GameObject ShopPanel;
-    Money PlayerMoney;
+    Wall Player;
     public TextMeshProUGUI MoneyUI;
+    public TextMeshProUGUI Powercount;
     void Start()
     {
         ShopPanel.SetActive(false);
-        PlayerMoney = GameObject.FindGameObjectWithTag("Wall").GetComponent<Money>();
+        Player = GameObject.FindGameObjectWithTag("Wall").GetComponent<Wall>();
     }
 
     void Update()
@@ -20,6 +21,7 @@ public class UIManager : MonoBehaviour
             bool isactive = ShopPanel.activeSelf;
             ShopPanel.SetActive(!isactive);
         }
-        MoneyUI.text = PlayerMoney.MoneyCount.ToString();
+        MoneyUI.text = Player.GetComponent<Money>().MoneyCount.ToString();
+        Powercount.text = "x"+Player.GetComponent<Powerup>().powerCount.ToString();
     }
 }

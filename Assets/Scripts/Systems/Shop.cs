@@ -24,6 +24,18 @@ public class Shop : MonoBehaviour
             }
         }
     }
+    public void PowerupBuy(int Cost)
+    {
+        if (PlayerMoney.GetComponent<Money>().MoneyCount == Cost || PlayerMoney.GetComponent<Money>().MoneyCount > Cost)
+        {
+            PlayerMoney.GetComponent<Powerup>().IncreasePowerCount(1);
+            PlayerMoney.GetComponent<Money>().MoneyCount -= Cost;
+        }
+        else
+        {
+            return;
+        }
+    }
 
    
 }

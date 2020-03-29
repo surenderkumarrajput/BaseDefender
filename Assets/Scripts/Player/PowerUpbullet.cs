@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Bullet : MonoBehaviour
+public class PowerUpbullet : MonoBehaviour
 {
     Vector2 dir;
 
@@ -13,7 +13,7 @@ public class Bullet : MonoBehaviour
 
     private void Start()
     {
-        dir=FindObjectOfType<ArtilleryController>().dir;
+        dir = FindObjectOfType<ArtilleryController>().dir;
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -23,10 +23,10 @@ public class Bullet : MonoBehaviour
             Destroy(gameObject, 0.01f);
         }
     }
-   
+
     void Update()
     {
-        transform.Translate(dir*speed*Time.deltaTime);
-        Destroy(gameObject,6f);
+        transform.Translate(dir * speed * Time.deltaTime);
+        Destroy(gameObject, 6f);
     }
 }
