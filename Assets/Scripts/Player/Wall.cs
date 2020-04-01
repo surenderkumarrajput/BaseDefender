@@ -1,7 +1,6 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
+
 public class Wall : MonoBehaviour
 {
     private HealthSystem HealthSystem;
@@ -10,6 +9,8 @@ public class Wall : MonoBehaviour
 
     public delegate void Playerdeath();
     public static Playerdeath playerdeath;
+
+   
 
     void Start()
     {
@@ -30,8 +31,10 @@ public class Wall : MonoBehaviour
         if(HealthSystem.Health==0)
         {
             playerdeath();
+            SceneChangeManager.instance.SceneChangeMethod("Lost");
             Destroy(gameObject);
         }
         HealthSlider.fillAmount = HealthSystem.Health / 100;
+     
     }
 }

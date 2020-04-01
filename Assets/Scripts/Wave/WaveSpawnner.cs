@@ -55,7 +55,7 @@ public class WaveSpawnner : MonoBehaviour
         waveCountDown = TimeBetweenWaves;
         if(nextwave+1>waves.Length-1)
         {
-            nextwave = 0;
+            SceneChangeManager.instance.SceneChangeMethod("Win");
         }
         else
         {
@@ -75,7 +75,6 @@ public class WaveSpawnner : MonoBehaviour
     }
     public void Spawn(Transform _enemy)
     {
-        Debug.Log("Spawnning enemy");
         Transform _Spawnpoints = SpawnPoints[Random.Range(0, SpawnPoints.Length)];
         Instantiate(_enemy,_Spawnpoints.transform.position, Quaternion.identity);
     }

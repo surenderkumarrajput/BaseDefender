@@ -10,7 +10,6 @@ public class Money : MonoBehaviour
     }
     private void Update()
     {
-        Debug.Log(MoneyCount);
     }
     public void AddMoney(int Money)
     {

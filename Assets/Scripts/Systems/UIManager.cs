@@ -6,8 +6,10 @@ public class UIManager : MonoBehaviour
 {
     public GameObject ShopPanel;
     Wall Player;
+    public ArtilleryController artilleryController;
     public TextMeshProUGUI MoneyUI;
     public TextMeshProUGUI Powercount;
+    public TextMeshProUGUI BulletCount;
     void Start()
     {
         ShopPanel.SetActive(false);
@@ -21,7 +23,15 @@ public class UIManager : MonoBehaviour
             bool isactive = ShopPanel.activeSelf;
             ShopPanel.SetActive(!isactive);
         }
-        MoneyUI.text = Player.GetComponent<Money>().MoneyCount.ToString();
-        Powercount.text = "x"+Player.GetComponent<Powerup>().powerCount.ToString();
+        if(Player==null)
+        {
+            return;
+        }
+        else
+        {
+            MoneyUI.text = Player.GetComponent<Money>().MoneyCount.ToString();
+            Powercount.text = "x" + Player.GetComponent<Powerup>().powerCount.ToString();
+            BulletCount.text = "x" +artilleryController.BulletCount.ToString();
+        }
     }
 }

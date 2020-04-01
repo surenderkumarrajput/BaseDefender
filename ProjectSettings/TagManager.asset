@@ -9,6 +9,7 @@ TagManager:
   - Bullet
   - EnemyBullet
   - PowerupBullet
+  - Trigger
   layers:
   - Default
   - TransparentFX

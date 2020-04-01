@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class Shop : MonoBehaviour
 {
-    GameObject PlayerMoney;
+    GameObject PlayerMoney,Trigger;
     private void Start()
     {
         PlayerMoney = GameObject.FindGameObjectWithTag("Wall");
+        Trigger = GameObject.FindGameObjectWithTag("Trigger");
     }
     public void HealthBuy(int Cost)
     {
@@ -36,6 +37,18 @@ public class Shop : MonoBehaviour
             return;
         }
     }
-
-   
+    public void BulletsBuy(int Cost)
+    {
+        if (PlayerMoney.GetComponent<Money>().MoneyCount == Cost || PlayerMoney.GetComponent<Money>().MoneyCount > Cost && Trigger.GetComponent<ArtilleryController>().BulletCount < Trigger.GetComponent<ArtilleryController>().MaxBulletcount)
+        {
+            Trigger.GetComponent<ArtilleryController>().BulletCount = Trigger.GetComponent<ArtilleryController>().MaxBulletcount;
+            Trigger.GetComponent<ArtilleryController>().Reloadingtext.SetActive(false);
+            Trigger.GetComponent<ArtilleryController>().Reloading = false;
+            PlayerMoney.GetComponent<Money>().MoneyCount -= Cost;
+        }
+        else
+        {
+            return;
+        }
+    }
 }
