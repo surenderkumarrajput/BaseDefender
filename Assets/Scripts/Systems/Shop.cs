@@ -16,6 +16,8 @@ public class Shop : MonoBehaviour
         {
             if (PlayerMoney.GetComponent<HealthSystem>().Health< PlayerMoney.GetComponent<HealthSystem>().Maxhealth)
             {
+                FindObjectOfType<AudioManager>().Play("Tap");
+                FindObjectOfType<AudioManager>().Play("Healing");
                 PlayerMoney.GetComponent<HealthSystem>().Health = PlayerMoney.GetComponent<HealthSystem>().Maxhealth;
                 PlayerMoney.GetComponent<Money>().MoneyCount -= Cost;
             }
@@ -29,6 +31,7 @@ public class Shop : MonoBehaviour
     {
         if (PlayerMoney.GetComponent<Money>().MoneyCount == Cost || PlayerMoney.GetComponent<Money>().MoneyCount > Cost)
         {
+            FindObjectOfType<AudioManager>().Play("Tap");
             PlayerMoney.GetComponent<Powerup>().IncreasePowerCount(1);
             PlayerMoney.GetComponent<Money>().MoneyCount -= Cost;
         }
@@ -41,6 +44,7 @@ public class Shop : MonoBehaviour
     {
         if (PlayerMoney.GetComponent<Money>().MoneyCount == Cost || PlayerMoney.GetComponent<Money>().MoneyCount > Cost && Trigger.GetComponent<ArtilleryController>().BulletCount < Trigger.GetComponent<ArtilleryController>().MaxBulletcount)
         {
+            FindObjectOfType<AudioManager>().Play("Tap");
             Trigger.GetComponent<ArtilleryController>().BulletCount = Trigger.GetComponent<ArtilleryController>().MaxBulletcount;
             Trigger.GetComponent<ArtilleryController>().Reloadingtext.SetActive(false);
             Trigger.GetComponent<ArtilleryController>().Reloading = false;

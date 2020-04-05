@@ -30,7 +30,7 @@ public class SceneChangeManager : MonoBehaviour
   IEnumerator SceneChange(string scenename)
     {
         anim.SetTrigger("Transition");
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(2f);
         loading.SetActive(true);
         yield return new WaitForSeconds(5f);
         SceneManager.LoadSceneAsync(scenename);
@@ -38,6 +38,12 @@ public class SceneChangeManager : MonoBehaviour
     }
     public void Quit()
     {
+        FindObjectOfType<AudioManager>().Play("Tap");
         Application.Quit();
     }
+    public void clickSound(string name)
+    {
+        FindObjectOfType<AudioManager>().Play(name);
+    }
+   
 }

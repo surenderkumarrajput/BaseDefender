@@ -7,10 +7,10 @@ public class Wall : MonoBehaviour
 
     public Image HealthSlider;
 
+    public GameObject Deatheffect;
+
     public delegate void Playerdeath();
     public static Playerdeath playerdeath;
-
-   
 
     void Start()
     {
@@ -28,11 +28,13 @@ public class Wall : MonoBehaviour
     }
     private void Update()
     {
-        if(HealthSystem.Health==0)
+        if (HealthSystem.Health==0)
         {
             playerdeath();
+            FindObjectOfType<AudioManager>().Play("Blast");
+            Instantiate(Deatheffect, transform.position, Quaternion.identity);
+            Destroy(gameObject, 0.01f);
             SceneChangeManager.instance.SceneChangeMethod("Lost");
-            Destroy(gameObject);
         }
         HealthSlider.fillAmount = HealthSystem.Health / 100;
      

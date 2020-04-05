@@ -1,0 +1,106 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &108111520420717592
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 108111520420717590}
+  - component: {fileID: 108111520420717591}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &108111520420717590
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 108111520420717592}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.1183944, y: -2.9806092, z: -1.0284814}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &108111520420717591
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 108111520420717592}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ac037e72766655499feb88ce656db17, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AudioArray:
+  - name: Theme
+    clip: {fileID: 8300000, guid: 0651b56880a11ef45909b779443691aa, type: 3}
+    volume: 1
+    pitch: 1
+    Loop: 1
+    source: {fileID: 0}
+  - name: EnemyDeath
+    clip: {fileID: 8300000, guid: 1300167911a825e4f8920368b94bb0d1, type: 3}
+    volume: 1
+    pitch: 1
+    Loop: 0
+    source: {fileID: 0}
+  - name: Tap
+    clip: {fileID: 8300000, guid: df6d1af64fdebb04d80a54b27b720509, type: 3}
+    volume: 1
+    pitch: 1
+    Loop: 0
+    source: {fileID: 0}
+  - name: Powerup
+    clip: {fileID: 8300000, guid: 98f846ccf98aa3e4392b2bfac0bf1e4b, type: 3}
+    volume: 1
+    pitch: 1
+    Loop: 0
+    source: {fileID: 0}
+  - name: Attack
+    clip: {fileID: 8300000, guid: 0b8a97135c2a74543b7bba2d8d7f1a50, type: 3}
+    volume: 1
+    pitch: 1
+    Loop: 0
+    source: {fileID: 0}
+  - name: Healing
+    clip: {fileID: 8300000, guid: 1fe4c784ebc9b4845a474cc03ee8a571, type: 3}
+    volume: 1
+    pitch: 1
+    Loop: 0
+    source: {fileID: 0}
+  - name: SpitterAttack
+    clip: {fileID: 8300000, guid: c539814be01106547adfb69ffbf92813, type: 3}
+    volume: 1
+    pitch: 1
+    Loop: 0
+    source: {fileID: 0}
+  - name: Slogan
+    clip: {fileID: 8300000, guid: 07cd16803969ca048beaebc2a7cd8127, type: 3}
+    volume: 1
+    pitch: 1
+    Loop: 0
+    source: {fileID: 0}
+  - name: HuntBegins
+    clip: {fileID: 8300000, guid: 7b0c1424895622e4eba592b484352ef6, type: 3}
+    volume: 1
+    pitch: 1
+    Loop: 0
+    source: {fileID: 0}
+  - name: Blast
+    clip: {fileID: 8300000, guid: 8428061e2e6a65344aa1a61e288b2baa, type: 3}
+    volume: 1
+    pitch: 1
+    Loop: 0
+    source: {fileID: 0}

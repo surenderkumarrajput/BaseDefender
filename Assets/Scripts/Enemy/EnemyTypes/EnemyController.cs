@@ -48,6 +48,7 @@ public class EnemyController : MonoBehaviour
         {
             var hitDamage=collision.gameObject.GetComponent<Bullet>().Damage;
             HealthSystem.HealthDecrese(hitDamage);
+            Camera.main.GetComponent<Animator>().SetTrigger("Shake");
             HealthSystem.Health = Mathf.Clamp(HealthSystem.Health, 0, 100f);
             PlayerMoney.AddMoney(HitBonus);
         }
@@ -55,6 +56,7 @@ public class EnemyController : MonoBehaviour
         {
             var hitDamage = collision.gameObject.GetComponent<PowerUpbullet>().Damage;
             HealthSystem.HealthDecrese(hitDamage);
+            Camera.main.GetComponent<Animator>().SetTrigger("Shake");
             HealthSystem.Health = Mathf.Clamp(HealthSystem.Health, 0, 100f);
             PlayerMoney.AddMoney(HitBonus);
         }
@@ -98,11 +100,13 @@ public class EnemyController : MonoBehaviour
     {
         isAlive = false;
         anim.SetTrigger("Death");
-        yield return new WaitForSeconds(0.5f);
-        Destroy(gameObject);
+        yield return new WaitForSeconds(0.4f);
+        FindObjectOfType<AudioManager>().Play("EnemyDeath");
+        Destroy(gameObject,0.001f);
     }
     IEnumerator Shoot()
     {
+        FindObjectOfType<AudioManager>().Play("SpitterAttack");
         Instantiate(EnemyBullet, Trigger.position, Quaternion.identity);
         yield return new WaitForSeconds(4f);
     }

@@ -196,7 +196,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 118388881}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.29, y: -1.09, z: 0}
+  m_LocalPosition: {x: 5.51, y: -1.09, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1422476506}
@@ -269,7 +269,7 @@ MonoBehaviour:
   m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 2560, y: 1440}
+  m_ReferenceResolution: {x: 2280, y: 1080}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -330,7 +330,7 @@ GameObject:
   - component: {fileID: 582295703}
   - component: {fileID: 582295702}
   m_Layer: 0
-  m_Name: dark fantasy 720x320
+  m_Name: BG
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -395,7 +395,7 @@ Transform:
   m_GameObject: {fileID: 582295701}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2.6195, y: 3.1379254, z: 2.6195}
+  m_LocalScale: {x: 3.0255222, y: 3.1379254, z: 2.6195}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
@@ -427,15 +427,15 @@ RectTransform:
   m_GameObject: {fileID: 649443857}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.9691275, y: 1.9691275, z: 1.9691275}
+  m_LocalScale: {x: 0.8333151, y: 0.8333151, z: 0.8333151}
   m_Children: []
   m_Father: {fileID: 344095892}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -337, y: 80}
-  m_SizeDelta: {x: 393, y: 91}
+  m_AnchoredPosition: {x: -337, y: 18}
+  m_SizeDelta: {x: 1750, y: 148}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &649443859
 MonoBehaviour:
@@ -455,7 +455,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 08f156891f7c5d643804a09a04032db6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 211956726d6633f4bad474a455cb568a, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -775,6 +775,75 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1739842964
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 108111520420717590, guid: 4a4c94c6c29e1914bb295640ff9345d6,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.1183944
+      objectReference: {fileID: 0}
+    - target: {fileID: 108111520420717590, guid: 4a4c94c6c29e1914bb295640ff9345d6,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.9806092
+      objectReference: {fileID: 0}
+    - target: {fileID: 108111520420717590, guid: 4a4c94c6c29e1914bb295640ff9345d6,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.0284814
+      objectReference: {fileID: 0}
+    - target: {fileID: 108111520420717590, guid: 4a4c94c6c29e1914bb295640ff9345d6,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 108111520420717590, guid: 4a4c94c6c29e1914bb295640ff9345d6,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 108111520420717590, guid: 4a4c94c6c29e1914bb295640ff9345d6,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 108111520420717590, guid: 4a4c94c6c29e1914bb295640ff9345d6,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 108111520420717590, guid: 4a4c94c6c29e1914bb295640ff9345d6,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 108111520420717590, guid: 4a4c94c6c29e1914bb295640ff9345d6,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 108111520420717590, guid: 4a4c94c6c29e1914bb295640ff9345d6,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 108111520420717590, guid: 4a4c94c6c29e1914bb295640ff9345d6,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 108111520420717592, guid: 4a4c94c6c29e1914bb295640ff9345d6,
+        type: 3}
+      propertyPath: m_Name
+      value: AudioManager
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4a4c94c6c29e1914bb295640ff9345d6, type: 3}
 --- !u!1 &1804390757
 GameObject:
   m_ObjectHideFlags: 0
@@ -966,7 +1035,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -340, y: -236}
+  m_AnchoredPosition: {x: -340, y: -215}
   m_SizeDelta: {x: 269.13, y: 51.17}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2030957448
@@ -1021,6 +1090,17 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: Start
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 344095888}
+        m_MethodName: clickSound
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Tap
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &2030957449
@@ -1113,7 +1193,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1103, y: -569}
+  m_AnchoredPosition: {x: 968, y: -424}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7814357446339074078
