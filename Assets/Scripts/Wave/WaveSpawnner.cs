@@ -55,6 +55,7 @@ public class WaveSpawnner : MonoBehaviour
         waveCountDown = TimeBetweenWaves;
         if(nextwave+1>waves.Length-1)
         {
+            FindObjectOfType<AudioManager>().Play("WinVoice");
             SceneChangeManager.instance.SceneChangeMethod("Win");
         }
         else

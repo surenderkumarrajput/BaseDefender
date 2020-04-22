@@ -2281,7 +2281,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 150
+          m_IntArgument: 120
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -2304,7 +2304,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 150
+  m_text: '120
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
@@ -3842,9 +3844,13 @@ MonoBehaviour:
     count: 3
     rate: 1
   - name: 3
-    enemy: {fileID: 4806700454834664870, guid: ea7b13377ce8f3f41bfe169af21f2b7e, type: 3}
-    count: 4
-    rate: 0.5
+    enemy: {fileID: 4449673942747397208, guid: 7740817e1fdaa9f49836063f542f5ae9, type: 3}
+    count: 2
+    rate: 0.7
+  - name: 4
+    enemy: {fileID: 4449673942747397208, guid: cdee954fdffa9224abe04565c231544b, type: 3}
+    count: 1
+    rate: 0.9
   TimeBetweenWaves: 5
   waveCountDown: 0
   searchCountdown: 0
@@ -4448,6 +4454,71 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 108111520420717591, guid: 4a4c94c6c29e1914bb295640ff9345d6,
+        type: 3}
+      propertyPath: AudioArray.Array.size
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 108111520420717591, guid: 4a4c94c6c29e1914bb295640ff9345d6,
+        type: 3}
+      propertyPath: AudioArray.Array.data[10].name
+      value: PowerupVoice
+      objectReference: {fileID: 0}
+    - target: {fileID: 108111520420717591, guid: 4a4c94c6c29e1914bb295640ff9345d6,
+        type: 3}
+      propertyPath: AudioArray.Array.data[10].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: b6a8f307a40299643a4ac8602eb089a8, type: 3}
+    - target: {fileID: 108111520420717591, guid: 4a4c94c6c29e1914bb295640ff9345d6,
+        type: 3}
+      propertyPath: AudioArray.Array.data[10].volume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 108111520420717591, guid: 4a4c94c6c29e1914bb295640ff9345d6,
+        type: 3}
+      propertyPath: AudioArray.Array.data[10].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 108111520420717591, guid: 4a4c94c6c29e1914bb295640ff9345d6,
+        type: 3}
+      propertyPath: AudioArray.Array.data[11].name
+      value: WinVoice
+      objectReference: {fileID: 0}
+    - target: {fileID: 108111520420717591, guid: 4a4c94c6c29e1914bb295640ff9345d6,
+        type: 3}
+      propertyPath: AudioArray.Array.data[11].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 640d741557e1428469fe38fe07ece464, type: 3}
+    - target: {fileID: 108111520420717591, guid: 4a4c94c6c29e1914bb295640ff9345d6,
+        type: 3}
+      propertyPath: AudioArray.Array.data[11].volume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 108111520420717591, guid: 4a4c94c6c29e1914bb295640ff9345d6,
+        type: 3}
+      propertyPath: AudioArray.Array.data[11].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 108111520420717591, guid: 4a4c94c6c29e1914bb295640ff9345d6,
+        type: 3}
+      propertyPath: AudioArray.Array.data[12].name
+      value: LostVoice
+      objectReference: {fileID: 0}
+    - target: {fileID: 108111520420717591, guid: 4a4c94c6c29e1914bb295640ff9345d6,
+        type: 3}
+      propertyPath: AudioArray.Array.data[12].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 640d741557e1428469fe38fe07ece464, type: 3}
+    - target: {fileID: 108111520420717591, guid: 4a4c94c6c29e1914bb295640ff9345d6,
+        type: 3}
+      propertyPath: AudioArray.Array.data[12].volume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 108111520420717591, guid: 4a4c94c6c29e1914bb295640ff9345d6,
+        type: 3}
+      propertyPath: AudioArray.Array.data[12].pitch
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 108111520420717592, guid: 4a4c94c6c29e1914bb295640ff9345d6,
         type: 3}

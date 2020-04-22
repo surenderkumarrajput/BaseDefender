@@ -31,7 +31,7 @@ public class Shop : MonoBehaviour
     {
         if (PlayerMoney.GetComponent<Money>().MoneyCount == Cost || PlayerMoney.GetComponent<Money>().MoneyCount > Cost)
         {
-            FindObjectOfType<AudioManager>().Play("Tap");
+            FindObjectOfType<AudioManager>().Play("PowerupVoice");
             PlayerMoney.GetComponent<Powerup>().IncreasePowerCount(1);
             PlayerMoney.GetComponent<Money>().MoneyCount -= Cost;
         }

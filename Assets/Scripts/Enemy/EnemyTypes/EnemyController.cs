@@ -88,8 +88,8 @@ public class EnemyController : MonoBehaviour
     }
     public void Move()
     {
+        anim.SetTrigger("Walk");
         transform.Translate(Vector2.right*Time.deltaTime*speed);
-        anim.SetBool("Walk", true);
     }
     public void Attack()
     {
