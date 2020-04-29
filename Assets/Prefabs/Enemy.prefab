@@ -162,11 +162,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Enemytypes:
-    name: Humang
+    Name: 
     AttackDamage: 10
     Health: 30
   speed: 2
   radius: 5
+  Fire_Rate: 1
   HitBonus: 10
   layerMask:
     serializedVersion: 2

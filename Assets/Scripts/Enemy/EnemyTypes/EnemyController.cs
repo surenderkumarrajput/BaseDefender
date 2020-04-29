@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Timers;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -14,7 +15,9 @@ public class EnemyController : MonoBehaviour
     
     public float speed;
     public float radius;
-    float MaxHealth;
+    public float Fire_Rate;
+    private float Fixed_Time;
+    private float MaxHealth;
 
     public int HitBonus;
 
@@ -73,28 +76,32 @@ public class EnemyController : MonoBehaviour
             Collider2D[] collider = Physics2D.OverlapCircleAll(transform.position, radius, layerMask);
             foreach (var item in collider)
             {
-                Attack();
+                if (Time.time > Fixed_Time)
+                {
+                    canWalk = false;
+                    Fixed_Time = Time.time + 1 / Fire_Rate;
+                    anim.SetTrigger("Attack");
+                }
             }
             if (canWalk == true)
             {
                 Move();
             }
+            else
+            {
+                anim.SetFloat("Speed", 0);
+            }
         }
         else
         {
-            anim.ResetTrigger("Walk");
+            anim.SetFloat("Speed",0);
             anim.ResetTrigger("Attack");
         }
     }
     public void Move()
     {
-        anim.SetTrigger("Walk");
+        anim.SetFloat("Speed",1);
         transform.Translate(Vector2.right*Time.deltaTime*speed);
-    }
-    public void Attack()
-    {
-        canWalk = false;
-        anim.SetTrigger("Attack");
     }
     IEnumerator EnemyDeath()
     {
@@ -104,11 +111,10 @@ public class EnemyController : MonoBehaviour
         FindObjectOfType<AudioManager>().Play("EnemyDeath");
         Destroy(gameObject,0.001f);
     }
-    IEnumerator Shoot()
+    void Shoot()
     {
-        FindObjectOfType<AudioManager>().Play("SpitterAttack");
-        Instantiate(EnemyBullet, Trigger.position, Quaternion.identity);
-        yield return new WaitForSeconds(4f);
+       FindObjectOfType<AudioManager>().Play("SpitterAttack");
+       Instantiate(EnemyBullet, Trigger.position, Quaternion.identity);
     }
     private void OnDrawGizmos()
     {

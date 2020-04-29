@@ -273,11 +273,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Enemytypes:
-    name: Gunner
+    Name: Boss
     AttackDamage: 30
     Health: 60
   speed: 2
-  radius: 8
+  radius: 10
+  Fire_Rate: 0.2
   HitBonus: 60
   layerMask:
     serializedVersion: 2
@@ -464,7 +465,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8913737981965136110}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.69, y: 0.94, z: 0}
+  m_LocalPosition: {x: -1.2, y: 1.22, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4449673942747397208}

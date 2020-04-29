@@ -8,12 +8,19 @@ using TMPro;
 public class Dialog : MonoBehaviour
 {
     public TextMeshProUGUI text;
+
     [TextArea(1,3)]
     public string[] sentences;
+
     public float waittime;
-    int index;
+
+    private int index;
+
     public GameObject Continue;
+    public GameObject Skip;
+
     public string Scenename;
+
     private void Start()
     {
         StartCoroutine(type());
@@ -25,7 +32,10 @@ public class Dialog : MonoBehaviour
         {
             Continue.SetActive(true);
         }
-      
+        if(PlayerPrefs.GetInt("AlreadyLoaded")==1)
+        {
+            Skip.SetActive(true);
+        }
     }
     IEnumerator type()
     {
@@ -48,6 +58,7 @@ public class Dialog : MonoBehaviour
         else
         {
             text.text = "";
+            PlayerPrefs.SetInt("AlreadyLoaded",1);
             SceneChangeManager.instance.SceneChangeMethod("Game");
         }
         if (index == 2)
