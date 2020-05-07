@@ -749,7 +749,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 1910325140}
-        m_MethodName: clickSound
+        m_MethodName: ClickSound
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
