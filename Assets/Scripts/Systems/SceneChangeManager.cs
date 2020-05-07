@@ -20,14 +20,13 @@ public class SceneChangeManager : MonoBehaviour
         }
         loading.SetActive(false);
     }
-    private void Update()
-    {
-    }
+
     public void SceneChangeMethod(string scenename)
     {
         StartCoroutine(SceneChange(scenename));
     }
-  IEnumerator SceneChange(string scenename)
+
+    IEnumerator SceneChange(string scenename)
     {
         anim.SetTrigger("Transition");
         yield return new WaitForSeconds(2f);
@@ -41,9 +40,17 @@ public class SceneChangeManager : MonoBehaviour
         FindObjectOfType<AudioManager>().Play("Tap");
         Application.Quit();
     }
-    public void clickSound(string name)
+    public void ClickSound(string name)
     {
         FindObjectOfType<AudioManager>().Play(name);
     }
-   
+    public void SetActive_Object(GameObject Go)
+    {
+        Go.SetActive(true);
+    }
+    public void SetUnActive_Object(GameObject Go)
+    {
+        Go.SetActive(false);
+    }
+
 }
